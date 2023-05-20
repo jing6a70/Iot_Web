@@ -206,4 +206,6 @@ init_subscribe()
 '''
 注意: Linux终端中必须"添加转义字符 -> \, json数据中的"需要写为\"， 否则on_message回调函数中会出问题, 即json数据解析错误
 mosquitto_pub -t "dd646cfa-a678-4d6f-a0ae-8368ee957e06" -m "{\"metricdata\":[{\"ctrlchannel\":\"d24cf0d3-505c-4130-ab29-63a792013936\",\"value\":555}]}"
+訂閱設備
+mosquitto_sub  -t "d24cf0d3-505c-4130-ab29-63a792013936" 
 '''
